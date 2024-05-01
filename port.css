@@ -1,0 +1,243 @@
+/* Basic Styles */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('back.jpg'); /* Set the background image */
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the background image */
+    color: #333;
+}
+
+h1, h2, h3 {
+    margin: 1rem 0;
+    color: #222;
+}
+
+p, li {
+    line-height: 1.6;
+    color: #666;
+    font-size: 16px;
+}
+
+a {
+    color: #1a73e8;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    padding-left: 20px; /* Better alignment for lists */
+}
+
+li {
+    margin: 0.5rem 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+Copy code
+/* Header Styles */
+header {
+    position: relative;
+    width: 100%;
+    height: 100%; /* Adjust height as needed */
+    color: white;
+    background: url('jayanth.png') no-repeat center center;
+    background-size: cover; /* Ensure the image covers the entire header */
+}
+
+.header-content {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center; /* Vertically aligns the text content */
+    justify-content: start; /* Horizontally aligns text content to the left */
+}
+
+.header-text {
+    position: absolute;
+    left: 50px; /* Adjust the distance from the left edge */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Ensure vertical centering */
+    text-align: left;
+    width: auto; /* Adjust width as needed for text wrapping */
+    background: rgba(0, 0, 0, 0.75); /* Darker semi-transparent background for text */
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 1.2rem; /* Adjust text size as needed */
+    line-height: 1.4; /* Adjust line spacing for better readability */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    color: white;
+}
+
+/* Add this CSS rule to change the color of the name */
+.header-text h1 {
+    color: #ADBCE6; /* Change to your desired color */
+}.header-text h2 {
+    color: #DFF2FF; /* Change to your desired color */
+}
+
+
+
+/* Main Styles */
+main {
+    padding: 20px;
+    margin-top: 20px; /* Adds space between the header and main content */
+}
+
+section {
+    margin-bottom: 2rem;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+}
+
+/* Section Styles with Images */
+.info-section {
+    display: flex;
+    align-items: center;  /* Vertically aligns the content */
+    justify-content: space-between; /* Spreads the text and image apart */
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.text-part, .image-part {
+    flex: 1;  /* Each takes up half of the container */
+    padding: 15px;
+}
+
+.image-part {
+    text-align: left; /* Aligns the image to the right */
+}
+
+.image-part img {
+    max-width: max-content; /* Limits image size */
+    height: auto;
+    border-radius: 8px; /* Optional: Adds rounded corners to the image */
+}
+
+/* Enhancing Specific Sections */
+#education .image-part img,
+#projects .image-part img {
+    max-width: 50%; /* Larger images for important details */
+}
+
+#skills .image-part img,
+#blog .image-part img {
+    max-width: 30%; /* Smaller images for sections with less visual focus */
+}
+
+#experience {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.experience-entry {
+    display: flex;
+    align-items: flex-start; /* Aligns items at the top */
+    margin-bottom: 20px; /* Space between entries */
+}
+
+.image-part {
+    flex: 0 0 auto; /* Do not grow or shrink */
+    width: 150px; /* Fixed width for the image container */
+    margin-right: 20px; /* Space between image and text */
+}
+
+.image-part img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Rounded corners for images */
+}
+
+.company {
+    flex: 1; /* Take up the rest of the space */
+    padding: 10px;
+}
+
+.company h3 {
+    color: #1a73e8;
+}
+
+@media (max-width: 768px) {
+    .experience-entry {
+        flex-direction: column; /* Stack on smaller screens */
+    }
+
+    .image-part {
+        margin-bottom: 10px; /* Space below image when stacked */
+        width: 100%; /* Full width images on small screens */
+    }
+}
+
+/* Footer Styles */
+footer {
+    background-image: url('foot.png'); /* Set the background image */
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the background image */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+}
+
+.social-links li {
+    margin: 0 15px;
+}
+
+.social-links li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-links li a:hover {
+    color: #1a73e8;
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+    .header-content, .container, footer {
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    .info-section {
+        flex-direction: column; /* Stacks image and text on smaller screens */
+    }
+
+    .image-part img {
+        max-width: 80%; /* Larger image for better visibility on small screens */
+    }
+}
